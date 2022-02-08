@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST APP API SHOPIFY</title>
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Fredoka+One&family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+    <div id="app" class="app">
+        <div id="header">
+            <h1 class="title">Art&iacute;culos</h1>
+            <div class="sync-up">
+                <button id="btn-sync-up"><i class="fa-solid fa-rotate"></i>Sincronizar</button>
+            </div>
+        </div>
+        <div id="products"></div>
+    </div>
+
+    <script src="http://sdks.shopifycdn.com/js-buy-sdk/v2/latest/index.umd.min.js"></script>
+    <script type="module" src="./build.js"></script>
+</body>
+
+</html>
