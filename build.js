@@ -4,20 +4,22 @@ const client = ShopifyBuy.buildClient({
     storefrontAccessToken: '7834ed716102f02b38892463c60dce57'
 });
 
-let HTMLcontent = '';
 let btnSync = document.querySelector('#btn-sync-up');
 let productsContent = document.querySelector('#products');
 
 
-btnSync.addEventListener('click', async() => {
-    await resetProducts().then(() => getProducts());
+btnSync.addEventListener('click', () => {
+    resetProducts();
+    getProducts();
 });
 
-const resetProducts = async() => {
+const resetProducts = () => {
     productsContent.innerHTML = "";
 }
 
 const getProducts = async() => {
+
+    let HTMLcontent = '';
 
     client.product.fetchAll().then((ObjProducts) => {
 
@@ -47,4 +49,5 @@ const getProducts = async() => {
 
 }
 
+//resetProducts();
 getProducts();
