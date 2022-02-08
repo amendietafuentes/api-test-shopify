@@ -50,4 +50,5 @@ const getProducts = async() => {
 }
 
 //resetProducts();
+
 getProducts();
